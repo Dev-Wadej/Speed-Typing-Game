@@ -107,6 +107,7 @@ function gameOver() {
     <h1>Time ran out</h1>
     <p>Here is your Final score: ${score}</p> 
     <button onClick='clearUi()'> Go back</button>`;
+    inputText.style.backgroundColor = '#576272';
     endGameEl.style.display = 'flex';
 }
 
