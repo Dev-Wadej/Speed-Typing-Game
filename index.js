@@ -33,7 +33,6 @@ const endGameEl = document.querySelector('#end-game-container');
 //     'game',
 //     'is',
 //     'difficult',
-
 //     'south',
 //     'independent',
 //     'steering',
@@ -105,7 +104,7 @@ function gameOver() {
     endGameEl.innerHTML = `
     <h1>Time ran out</h1>
     <p>Here is your Final score: ${score}</p> 
-    <button onClick='clearUi()'>Reload</button>`;
+    <button onClick='clearUi()'> Go back</button>`;
     endGameEl.style.display = 'flex';
 }
 
@@ -133,7 +132,7 @@ settingsBtn.addEventListener('click', () => {
 
 //Event Listener for the Input field matching the typed text
 inputText.addEventListener('input', (e) => {
-    const typedWord = e.target.value;
+    const typedWord = e.target.value.toLowerCase();
     if (typedWord === randomWord) {
         addWordToDOM(data[Math.floor(Math.random() * 5000)]);
         updateScore();

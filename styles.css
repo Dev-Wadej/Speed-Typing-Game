@@ -129,8 +129,8 @@ input {
 
 .start-game {
     position: absolute;
-    top: -50%;
-    left: -86%;
+    top: -30%;
+    left: 20%;
     font-size: 2rem;
     cursor: pointer;
 }
