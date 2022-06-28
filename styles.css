@@ -126,3 +126,11 @@ input {
     height: 100%;
     display: none;
 }
+
+.start-game {
+    position: absolute;
+    top: -50%;
+    left: -86%;
+    font-size: 2rem;
+    cursor: pointer;
+}

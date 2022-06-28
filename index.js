@@ -7,11 +7,42 @@ const scoreEl = document.querySelector('#score');
 const timeEl = document.querySelector('#time');
 const endGameEl = document.querySelector('#end-game-container');
 
+// const words = [
+//     'good',
+//     'south',
+//     'independent',
+//     'steering',
+//     'gold',
+//     'home',
+//     'artificial',
+//     'intelligence',
+//     'nine',
+//     'fame',
+//     'dismiss',
+//     'drop',
+//     'caring',
+//     'sing',
+//     'utensil',
+//     'airplane',
+//     'pilot',
+//     'basket',
+//     'juice',
+//     'ukraine',
+//     'captain',
+//     'this',
+//     'game',
+//     'is',
+//     'difficult',
+// ];
+
+{
+    /* <button onClick='window.location.reload()'>Reload</button>`; */
+}
 let data,
     randomWord,
     score = 0,
     difficulty,
-    time = 10;
+    time = 11;
 
 // API call and generates Random numbers of 5000 words
 randomWordsFunc = async() => {
@@ -49,9 +80,14 @@ function gameOver() {
     endGameEl.innerHTML = `
     <h1>Time ran out</h1>
     <p>Here is your Final score: ${score}</p> 
-    <button onClick='window.location.reload()'>Reload</button>`;
+    <button onClick='clearUi()'>Reload</button>`;
     endGameEl.style.display = 'flex';
 }
+
+function clearUi() {
+    endGameEl.style.display = 'none';
+}
+
 difficultySelect.addEventListener('change', (e) => {
     difficulty = e.target.value.toLowerCase();
     console.log(difficulty);
